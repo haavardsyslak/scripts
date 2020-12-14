@@ -1,3 +1,3 @@
 #!/bin/sh
 
-grep -v "#" ~/unicode | dmenu -i -l 20 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
+grep -v "#" ~/programering/scripts/unicode | dmenu -i -l 20 -fn Monospace-12 | awk '{print $1}' | tr -d '\n' | xclip -selection clipboard
