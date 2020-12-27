@@ -3,7 +3,7 @@
 # This is heavily based on this code here:
 # https://gist.github.com/maikeldotuk/54a91c21ed9623705fdce7bab2989742
 # Which is heavily based on this code here:
-# https://gist.github.com/enpassant/0496e3db19e32e110edca03647c36541
+#$\frac{\frac{x}{1}}{x - y}$ https://gist.github.com/enpassant/0496e3db19e32e110edca03647c36541
 # Special thank you to the user enpassant for starting it https://github.com/enpassant
 
 # ARGUMENT PARSING
@@ -27,7 +27,6 @@ TEMPLATE_DEFAULT="$8"
 TEMPLATE_EXT="$9"
 # Count of '../' for pages buried in subdirs
 ROOT_PATH="${10}"
-
 # If file is in vimwiki base dir, the root path is '-'
 [[ "$ROOT_PATH" = "-" ]] && ROOT_PATH=''
 
@@ -43,8 +42,8 @@ OUTPUT=$OUTPUTDIR$FILENAME
 # PANDOC ARGUMENTS
 
 # If you have Mathjax locally use this:
-# MATHJAX="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-MATHJAX="/usr/share/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+MATHJAX="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+#MATHJAX="/usr/share/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 # PREPANDOC PROCESSING AND PANDOC
 
@@ -56,7 +55,6 @@ pandoc_template="pandoc \
     -c $CSSFILENAME \
     -M root_path:$ROOT_PATH
 	--metadata title=$FILENAME"
-
 # Searches for markdown links (without extension or .md) and appends a .html
 #regex1='s/[^!()[]]*(\[[^]]+\])\(([^.)]+)(\.md)?\)/\1(\2.html)/g'
 regex1='s/[^!()[]]*(\[[^]]+\])\(([^.)]+)(\.md)?\)/ \1(\2.html)/g'
@@ -67,7 +65,7 @@ regex1='s/[^!()[]]*(\[[^]]+\])\(([^.)]+)(\.md)?\)/ \1(\2.html)/g'
 
 pandoc_input=$(cat "$INPUT" | sed -r "$regex1")
 pandoc_output=$(echo "$pandoc_input" | $pandoc_template)
-
+echo $pandoc_input
 # POSTPANDOC PROCESSING
 
 # Removes "file" from ![pic of sharks](file:../sharks.jpg)
