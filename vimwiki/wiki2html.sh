@@ -1,5 +1,7 @@
 #!/bin/bash
-
+#     __ 
+# |_|(_ 
+# | |__)
 # This is heavily based on this code here:
 # https://gist.github.com/maikeldotuk/54a91c21ed9623705fdce7bab2989742
 # Which is heavily based on this code here:
@@ -65,7 +67,6 @@ regex1='s/[^!()[]]*(\[[^]]+\])\(([^.)]+)(\.md)?\)/ \1(\2.html)/g'
 
 pandoc_input=$(cat "$INPUT" | sed -r "$regex1")
 pandoc_output=$(echo "$pandoc_input" | $pandoc_template)
-echo $pandoc_input
 # POSTPANDOC PROCESSING
 
 # Removes "file" from ![pic of sharks](file:../sharks.jpg)
