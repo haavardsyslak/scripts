@@ -82,3 +82,6 @@ echo "$pandoc_output" | sed -r $regex3 > "$OUTPUT.html"
 # destination=$(cd -- "$4" && pwd) # make it an absolute path
 # cd -- "/home/rattletat/wiki/text/" &&
     # find . -type f -regex ".*\.\(jpg\|gif\|png\|jpg\)" -exec cp {} "$destination/{}"
+
+# Send to ssh
+scp -r ~/uisfiles/notes/html syslak@prv.cymru:http
