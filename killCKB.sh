@@ -10,4 +10,6 @@ do
 done
 
 echo $e
+sleep .5
 xdotool key alt+q  
+
