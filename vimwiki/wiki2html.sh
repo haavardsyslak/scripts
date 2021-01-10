@@ -78,10 +78,5 @@ echo "$pandoc_output" | sed -r $regex3 > "$OUTPUT.html"
 # and the unnecesary dot html that the previous command added to the image.
 # sed 's/file://g' < /tmp/crap.html | sed 's/\(png\|jpg\|pdf\).html/\1/g' | sed -e 's/\(href=".*\)\.html/\1/g' > "$OUTPUT.html"
 
-# Copy relative
-# destination=$(cd -- "$4" && pwd) # make it an absolute path
-# cd -- "/home/rattletat/wiki/text/" &&
-    # find . -type f -regex ".*\.\(jpg\|gif\|png\|jpg\)" -exec cp {} "$destination/{}"
-
 # Send to ssh
-scp -r ~/uisfiles/notes/html syslak@prv.cymru:http
+scp -r ~/uisfiles/notes/html/* syslak@prv.cymru:http
