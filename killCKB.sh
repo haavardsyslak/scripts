@@ -9,7 +9,7 @@ do
 	b=$(ps ux | grep "ckb-next" | grep -v -c "grep")
 done
 
-echo $e
+echo $b
 sleep .5
 xdotool key alt+q  
 
