@@ -67,6 +67,7 @@ regex1='s/[^!()[]]*(\[[^]]+\])\(([^.)]+)(\.md)?\)/ \1(\2.html)/g'
 
 pandoc_input=$(cat "$INPUT" | sed -r "$regex1")
 pandoc_output=$(echo "$pandoc_input" | $pandoc_template)
+
 # POSTPANDOC PROCESSING
 
 # Removes "file" from ![pic of sharks](file:../sharks.jpg)
