@@ -80,4 +80,6 @@ echo "$pandoc_output" | sed -r $regex3 > "$OUTPUT.html"
 # sed 's/file://g' < /tmp/crap.html | sed 's/\(png\|jpg\|pdf\).html/\1/g' | sed -e 's/\(href=".*\)\.html/\1/g' > "$OUTPUT.html"
 
 # Send to ssh
+#echo $OUTPUT.html
+# TODO only send compiled files, instead of entire folder
 scp -r ~/uisfiles/notes/html/* syslak@prv.cymru:http
