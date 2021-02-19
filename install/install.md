@@ -31,7 +31,6 @@ htop
 alsa-utils
 pulsemixer
 ueberzug
-taskell
 xdotool
 sxiv
 openssh
