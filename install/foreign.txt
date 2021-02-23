@@ -1,5 +1,0 @@
-latex-mk
-libxft-bgra
-nerd-fonts-hack
-nerd-fonts-mononoki
-yay
