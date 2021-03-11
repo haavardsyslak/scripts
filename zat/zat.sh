@@ -13,6 +13,9 @@ case $fag in
         ;;
 esac
 
-zathura $file
+
+[ ! -z "$file" ] && zathura $file
+
+
 
 
