@@ -32,7 +32,7 @@ else:
             sys.exit(1)
             continue
         toWrite += fil + "\n"
-    print(toWrite)
+    print(toWrite.strip())
     with open(fag, "a") as f:
             f.write(toWrite)
 
