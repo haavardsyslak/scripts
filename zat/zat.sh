@@ -15,7 +15,3 @@ esac
 
 
 [ ! -z "$file" ] && zathura $file
-
-
-
-
