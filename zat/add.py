@@ -19,7 +19,6 @@ if len(args) <= 1:
 fag = zatPath + args.pop(0).lower()
 # fil = path + "/" + args.pop(0)
 
-
 if not os.path.isfile(fag):
     print("fag not found")
 
@@ -35,5 +34,4 @@ else:
     print(toWrite.strip())
     with open(fag, "a") as f:
             f.write(toWrite)
-
-
+            f.close()
