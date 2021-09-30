@@ -2,6 +2,7 @@
 #     __ 
 # |_|(_ 
 # | |__)
+#
 # This is heavily based on this code here:
 # https://gist.github.com/maikeldotuk/54a91c21ed9623705fdce7bab2989742
 # Which is heavily based on this code here:
@@ -43,8 +44,8 @@ OUTPUT=$OUTPUTDIR$FILENAME
 
 # PANDOC ARGUMENTS
 
-# If you have Mathjax locally use this:
 MATHJAX="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+# If you have Mathjax locally use this:
 #MATHJAX="/usr/share/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 # PREPANDOC PROCESSING AND PANDOC
