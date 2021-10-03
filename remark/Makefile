@@ -1,6 +1,6 @@
 install: 
 	@echo "installing"
-	$(shell sudo ln -s $$pwd/remarkable.sh /usr/local/bin/remark)
-	$(shell sudo ln -s $$pwd/rm2pdf.py /usr/local/bin/rm2pdf)
+	@sudo ln -s $(shell pwd)/remarkable.sh /usr/local/bin/remark
+	@sudo ln -s $(shell pwd)/rm2pdf.py /usr/local/bin/rm2pdf
 
 

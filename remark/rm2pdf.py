@@ -10,7 +10,7 @@ for subdir, dirs, files in os.walk("/tmp/remarkable"):
                 continue
             file_str = os.path.join(subdir, file)
             tmp = file_str.split("/")
-            outfile_str = f'{output_base_dir}/{"/".join(tmp[1:])}'
+            outfile_str = f'{output_base_dir}/{"/".join(tmp[2:])}'
             outfile_str.replace(".zip", ".pdf")
             outfile_str = outfile_str.split(".")[0] + ".pdf"
             print("converting file: ", outfile_str)
