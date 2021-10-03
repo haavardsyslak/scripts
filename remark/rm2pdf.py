@@ -2,7 +2,7 @@
 import rmrl
 import shutil
 import os
-output_base_dir = "/home/syslak/uisfiles/remarkable"
+output_base_dir = "/home/syslak/uisfiles/"
 for subdir, dirs, files in os.walk("/tmp/remarkable"):
     for file in files:
         if file.endswith(".zip"):
