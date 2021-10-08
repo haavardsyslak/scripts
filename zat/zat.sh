@@ -5,6 +5,9 @@ case $fag in
     "ELE210")
         file=$(cat $HOME/programering/scripts/zat/ele210 | dmenu -i -l 20 | awk '{print $1}')
         ;;
+    "ELE200")
+        file=$(cat $HOME/programering/scripts/zat/ele200 | dmenu -i -l 20 | awk '{print $1}')
+        ;;
     "MAT100")
         file=$(cat $HOME/programering/scripts/zat/mat100 | dmenu -i -l 20 | awk '{print $1}')
         ;;
