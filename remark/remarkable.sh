@@ -9,4 +9,8 @@ cd /tmp/remarkable
 rmapi -ni mget .
 rm2pdf
 
-mv /tmp/remarkable $XDG_CACHE_HOME/remarkable
+if [ -d "$XDG_CACHE_HOME/remarkable" ]; then
+    rm -r $XDG_CACHE_HOME/remarkable
+fi
+
+cp -r /tmp/remarkable $XDG_CACHE_HOME/remarkable
