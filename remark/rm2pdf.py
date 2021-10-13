@@ -64,11 +64,11 @@ def main():
 
 
 def convert_to_pdf(f):
-    print(f"Converting file: {out_file_str}")
     file_name = f.split(".")[0].split("/")[-1]
     out_dir = f"/home/syslak/uisfiles/" + "/".join(f.split("tmp/")[1].split("/")[0:-1])
-    out_file = rmrl.render(f)
     out_file_str = out_dir + "/" + file_name + ".pdf"
+    print(f"Converting file: {out_file_str}")
+    out_file = rmrl.render(f)
 
 
     if not os.path.isdir(out_dir):
