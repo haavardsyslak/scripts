@@ -2,6 +2,9 @@
 fag=$(cat $HOME/programering/scripts/zat/fag | dmenu -i -l 20 | awk '{print $1}')
 
 case $fag in
+    "KJE101")
+        file=$(cat $HOME/programering/scripts/zat/kje101 | dmenu -i -l 20 | awk '{print $1}')
+        ;;
     "ELE300")
         file=$(cat $HOME/programering/scripts/zat/ele300 | dmenu -i -l 20 | awk '{print $1}')
         ;;
