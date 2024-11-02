@@ -12,8 +12,11 @@ elif [[ -n "$1" ]]; then
     session_name=$(basename "$1" | tr . _)
     session_dir=$(pwd)
 else
-    #session_dir=$(| fzf --reverse --height 20)
-    session_dir=$( { fd . $HOME --type d --exclude Zotero --exclude Downloads --exclude Pictures --max-depth 2 --min-depth 1;  fd . $HOME/.config --max-depth 1; } | fzf --reverse --height 20)
+    session_dir=$( { 
+        tmux list-sessions -F "#{session_name}"
+        fd . $HOME --type d --exclude Zotero --exclude Downloads --exclude Pictures --max-depth 2 --min-depth 1
+        fd . $HOME/.config --max-depth 1
+    } | fzf --reverse )
     session_name=$(basename "$session_dir" | tr . _)
 fi
 
