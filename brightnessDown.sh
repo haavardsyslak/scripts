@@ -1,4 +1,4 @@
 #!/usr/bin/sh
 
-brightnessctl -d "amdgpu_bl0" set 20-
+brightnessctl -d "amdgpu_bl1" set 20-
 
