@@ -14,8 +14,9 @@ elif [[ -n "$1" ]]; then
 else
     session_dir=$( { 
         tmux list-sessions -F "#{session_name}"
-        fd . $HOME --type d --exclude Zotero --exclude Downloads --exclude Pictures --max-depth 2 --min-depth 1
+        fd . $HOME --type d --exclude Zotero --exclude Downloads --exclude Pictures --exclude Library --exclude Applications --max-depth 2 --min-depth 1
         fd . $HOME/.config --max-depth 1
+		fd . $HOME/source/catkin_ws --max-depth 2
     } | fzf --reverse )
     session_name=$(basename "$session_dir" | tr . _)
 fi
