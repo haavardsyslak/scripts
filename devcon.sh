@@ -8,4 +8,5 @@ if [[ $dir == $HOME* ]]; then
 fi
 
 
-devcontainer exec --workspace-folder=$devcon_root bash -c "cd $cd_path && exec zsh"
+docker exec -it --workdir $cd_path blunux-devcontainer zsh
+# devcontainer exec --workspace-folder=$devcon_root bash -c "cd $cd_path && exec zsh"
