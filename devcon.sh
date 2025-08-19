@@ -8,8 +8,11 @@ if [[ $dir == $HOME* ]]; then
 fi
 
 
+# docker exec -it --detach-keys="ctrl-q,ctrl-q" --workdir $cd_path blunux-devcontainer zsh
+# =======
 # docker exec -it --workdir $cd_path blunux-devcontainer zsh
 docker exec -it --workdir $cd_path \
 	-e DISPLAY=$DISPLAY \
+	--detach-keys="ctrl-q,ctrl-q" \
 	blunux-devcontainer zsh
 # devcontainer exec --workspace-folder=$devcon_root bash -c "cd $cd_path && exec zsh"
